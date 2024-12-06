@@ -4,8 +4,6 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../home/signup_screen.dart';
 import 'bloc/splash_blocs.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -74,8 +72,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       decorator: DotsDecorator(
                           color: Colors.grey,
                           activeColor: Colors.blue,
-                          size: Size.square(8),
-                          activeSize: Size(10,8),
+                          size: const Size.square(8),
+                          activeSize: const Size(10,8),
                           activeShape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8)
                           )
@@ -129,11 +127,11 @@ Widget _page( PageController pageController,int index,String title,String subTit
         onTap: (){
           if (index<3){
             pageController.animateToPage(index,
-                duration: Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 500),
                  curve:Curves.decelerate);
 
           }else{
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SignUpScreen()));
+            Navigator.of(context).pushNamedAndRemoveUntil("SignIn", (route) => false,);
 
           }
         },
