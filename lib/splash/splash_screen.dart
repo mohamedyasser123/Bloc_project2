@@ -1,3 +1,4 @@
+import 'package:bloc_pattern/common/values/colors.dart';
 import 'package:bloc_pattern/splash/bloc/splash_events.dart';
 import 'package:bloc_pattern/splash/bloc/splash_states.dart';
 import 'package:dots_indicator/dots_indicator.dart';
@@ -70,8 +71,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       dotsCount: 3,
                       mainAxisAlignment: MainAxisAlignment.center,
                       decorator: DotsDecorator(
-                          color: Colors.grey,
-                          activeColor: Colors.blue,
+                          color:AppColors.primaryThreeElementText,
+                          activeColor: AppColors.primaryElement,
                           size: const Size.square(8),
                           activeSize: const Size(10,8),
                           activeShape: RoundedRectangleBorder(
@@ -139,7 +140,7 @@ Widget _page( PageController pageController,int index,String title,String subTit
           width: 325.w,
           height: 50.h,
           decoration: BoxDecoration(
-              color: Colors.blue,
+              color:AppColors.primaryElement,
               borderRadius: BorderRadius.circular(24.r)
           ),
           child: Center(
@@ -147,7 +148,7 @@ Widget _page( PageController pageController,int index,String title,String subTit
               bottomName,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Colors.white.withOpacity(.5),
+                  color:AppColors.primaryElementText,
                   fontSize: 20.sp,
                   fontWeight: FontWeight.normal
               ),

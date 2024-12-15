@@ -1,3 +1,4 @@
+import 'package:bloc_pattern/common/values/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 AppBar buildAppBar(String title){
@@ -6,14 +7,14 @@ AppBar buildAppBar(String title){
       preferredSize: const Size.fromHeight(1.0),
       child: Container(
         height: 1,
-        color: Colors.grey.withOpacity(.5),
+        color: AppColors.primarySecondaryBackground,
       ),
     ),
 title: Center(
   child: Text(
     title,
     style: TextStyle(
-      color: Colors.black,
+      color:AppColors.primaryText,
       fontSize: 16.sp,
       fontWeight: FontWeight.normal
     ),
@@ -48,16 +49,16 @@ Widget signInBottom(String text ,bool isWhite){
     padding:EdgeInsets.symmetric(vertical: 12.h),
     width: 345.w,
     decoration: BoxDecoration(
-      color:isWhite?Colors.white: Colors.blue,
+      color:isWhite?AppColors.primaryBackground:AppColors.primaryElement,
       borderRadius: BorderRadius.circular(16.r),
-      border:isWhite? Border.all(color: Colors.grey,width: 1.w):null
+      border: Border.all(color: isWhite?AppColors.primaryFourElementText:Colors.transparent,width: 1.w)
     ),
     child: Center(
       child: Text(
           text,
         style: TextStyle(
           fontSize: 16.sp,
-          color:isWhite?Colors.black: Colors.white,
+          color:isWhite?AppColors.primaryText: AppColors.primaryBackground,
           fontWeight: FontWeight.normal,
         ),
       ),

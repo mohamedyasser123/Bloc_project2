@@ -1,4 +1,5 @@
-import 'package:bloc_pattern/home/widgets/signin_widget.dart';
+import 'package:bloc_pattern/common/values/colors.dart';
+import 'package:bloc_pattern/sign_in/widgets/signin_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -93,6 +94,7 @@ TextEditingController passwordController=TextEditingController();
               SizedBox(height: 10.h,),
               Text("Forget Password ??",
               style: TextStyle(
+                color: AppColors.primaryText,
                 decoration: TextDecoration.underline,
                 fontSize: 12.sp,
                 fontWeight: FontWeight.normal,
